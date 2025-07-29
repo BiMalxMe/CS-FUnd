@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Solana Crowdfunding dApp
 
-## Project info
+A modern crowdfunding platform built on the Solana blockchain. Create, discover, and support projects with fast, low-fee transactions.
 
-**URL**: https://lovable.dev/projects/8ebeec29-07af-4ee7-8084-1e0596f6adcf
+## Features
 
-## How can I edit this code?
+- Create campaigns with title, description, image, and funding goal
+- Donate SOL to campaigns directly from your wallet
+- Withdraw funds as a campaign creator
+- Connect with Phantom or other Solana wallets
+- Responsive, user-friendly UI
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Blockchain:** Solana, @solana/web3.js, Anchor (future)
+- **Wallet:** @solana/wallet-adapter
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8ebeec29-07af-4ee7-8084-1e0596f6adcf) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+1. **Clone the repo:**
+   ```
+   git clone https://github.com/your-username/solana-crowdfunding.git
+   cd solana-crowdfunding
+   ```
 
-**Use your preferred IDE**
+2. **Install dependencies:**
+   ```
+   npm install
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. **Configure environment:**
+   - Copy `.env.example` to `.env` and set your Solana RPC URL and network.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4. **Run the app:**
+   ```
+   npm run dev
+   ```
 
-Follow these steps:
+5. **Open in browser:**
+   - Visit [http://localhost:5173](http://localhost:5173)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Development Notes
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- The dApp currently simulates transactions for demo purposes.
+- To connect to a real Solana program, update the program ID and logic in `src/hooks/useCrowdfunding.ts` and `src/lib/solana.ts`.
+- Campaign and donation data are not persisted on-chain in this demo.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Folder Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- `src/pages/` — Main app pages (Campaigns, Create, NotFound)
+- `src/components/` — UI components (CampaignCard, DonationModal, etc.)
+- `src/hooks/` — Custom React hooks for Solana and app logic
+- `src/lib/` — Solana utility functions and constants
 
-**Edit a file directly in GitHub**
+## License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8ebeec29-07af-4ee7-8084-1e0596f6adcf) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
